@@ -137,7 +137,10 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
               {opts.bullet}
             </TextComponent>);
           }
-          linebreakAfter = opts.lineBreak;
+          if (index < list.length - 1)
+            linebreakAfter = opts.lineBreak;
+          if (index === 0)
+            linebreakBefore = opts.lineBreak;
         }
 
         const {NodeComponent, styles} = opts;
