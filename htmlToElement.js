@@ -139,8 +139,6 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           }
           if (index < list.length - 1)
             linebreakAfter = opts.lineBreak;
-          if (index === 0)
-            linebreakBefore = opts.lineBreak;
         }
 
         const {NodeComponent, styles} = opts;
